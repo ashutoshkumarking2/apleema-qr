@@ -1,0 +1,54 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Firebase and private credentials
+serviceAccountKey.json
+**/serviceAccountKey.json
+*.pem
+*.key
+*.p12
+
+# Dependencies and build output
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+dist-ssr/
+
+# Logs and temporary files
+*.log
+npm-debug.log*
+*.local
+
+# Backup folders
+backup-*/
+**/backup-*/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local backup and output files
+.step4-9-backup.txt
+poersell output.txt
+
+# Temporary source backups
+*.backup
+*.backup-*
+*.bak
+*.before-fix-*
+*.before-*
+
+*.backup*
+*.bak*
+*.before-*
+*.privacy-backup-*
+
+# Local documentation and backups
