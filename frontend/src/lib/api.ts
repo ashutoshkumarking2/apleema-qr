@@ -1,8 +1,8 @@
-﻿import { auth } from './firebase'
+import { auth } from './firebase'
 
 export type OtpPurpose = 'login' | 'logout'
 
-const API_BASE = (import.meta.env.VITE_API_URL || 'http://localhost:5000').replace(/\/$/, '')
+const API_BASE = (import.meta.env.VITE_API_URL || 'https://apleema-qr.onrender.com').replace(/\/$/, '')
 
 async function request(path: string, method = 'GET', body?: unknown) {
   const user = auth.currentUser
@@ -168,5 +168,6 @@ export async function getGithubAppStatus(): Promise<GithubAppStatus> { return re
 export async function beginGithubAppConnect(): Promise<string> { const data=await request('/api/github-app/connect'); return data.url }
 export async function getGithubAppRepositories(): Promise<GithubRepository[]> { const data=await request('/api/github-app/repositories'); return data.repositories || [] }
 export async function disconnectGithubApp(): Promise<void> { await request('/api/github-app/disconnect','DELETE') }
+
 
 
